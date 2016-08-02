@@ -21,6 +21,7 @@ main {
 
 main p{
     text-align: justify;
+    font-size: 1.5em;
 }
 
 footer{
@@ -37,6 +38,15 @@ footer section p{
 
 footer section p:after{
     content: "(matheus.tristao@gmail.com)"
+}
+
+footer section a{
+    text-decoration: none;
+    color: #fff;
+}
+
+footer section a:hover{
+    color: yellow;
 }
 
 h1{
@@ -70,7 +80,7 @@ h1{
 }
 
 #menu nav figure{
-    width: 10em;
+    width: 15em;
     height: 4em;
     position: absolute;
     right: 0;
