@@ -22,6 +22,10 @@ window.addEventListener("load", function load() {
     footer[0].addEventListener("click", function () {
         toogleMobileMenu(false);
     });
+
+    window.addEventListener('resize', function () {
+        toogleMobileMenu(false);
+    });
 });
 
 function toogleMobileMenu(show) {
