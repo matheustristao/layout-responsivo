@@ -49,16 +49,16 @@ h1{
 
 /*Menu responsivo 1*/
 
-#menu1{
+#menu{
     background-color: #0E2B3D;
 }
 
-#menu1 h1{
+#menu h1{
     text-align: center;
     color: #fff;
 }
 
-#menu1 nav{
+#menu nav{
     position: relative; /* Os filhos que  forem absolute vão se basear nele*/
     z-index: 9999;
     height: 4.5em; /* 4x10 = 40px*/
@@ -69,28 +69,28 @@ h1{
     text-align: center;
 }
 
-#menu1 nav figure{
+#menu nav figure{
     width: 10em;
     height: 4em;
     position: absolute;
     right: 0;
 }
 
-#menu1 nav figure img{
+#menu nav figure img{
     float: right;
     height: 4em;
     margin: 0;
     padding: 0;
 }
 
-#menu1 nav ul{
+#menu nav ul{
     position: absolute;
     left: 0;
     margin: 0; /*Tira margem esquerda do conjunto de intens do menu*/
     padding: 0;
 }
 
-#menu1 nav ul li{
+#menu nav ul li{
     font-size: 1.4em; /* Tamanho da fonte vai ser 1.4 x 10 = 14px*/
     text-transform: uppercase;
     margin-right: 0.5em;
@@ -100,13 +100,13 @@ h1{
     display: inline-block; /* li ocupa só o espaço do seu conteúdo, em vez da linha toda*/
 }
 
-#menu1 nav a{
+#menu nav a{
     padding: 0.5em 1.2em; /* Padding top e bottom de 5px e 12px para os itens do menu*/
     text-decoration: none; /* Remoção do sublinhado*/
     color: #fff;
 }
 
-#menu1 nav a:hover{
+#menu nav a:hover{
     background: #e2a618;
     color: #333;
     border-radius: 0.4em;
@@ -118,31 +118,31 @@ h1{
         margin: 0 0.5em 0 0.5em;
     }
 
-    #menu1 nav {
+    #menu nav {
         position: relative;
         padding-top: 0.3em;
     }
 
-    #menu1 h1, #menu1 figure{
+    #menu h1, #menu figure{
         display: none;
     }	
 
-    #menu1 nav ul{
+    #menu nav ul{
         width: 100%;
     }
 
     /* display none nas opções do menu*/
-    #menu1 nav ul li{
+    #menu nav ul li{
         background: #0E2B3D;
         display: none;
         margin: 0; 
     }	
 
-    #menu1 nav li.current{
+    #menu nav li.current{
         display: block;
     }	
 
-    #menu1 nav .current:after{
+    #menu nav .current:after{
         content: "\2630";  /*Símbolo do menu sanduíche com três barras horizontais*/
         position: absolute; /* position absolute faz a referência ser o nav que tem position relative*/
         right: 0.7em; /* em relação ao nav, fica 7px à direita*/
@@ -151,21 +151,28 @@ h1{
         color: #fff;
     }
 
-    #menu1 nav a{
+    #menu nav a{
         display: block;
         padding: 0.5em 0.5em 0.5em 1em;
         text-align: left;
     }
 
-    #menu1 .current a{
+    #menu .current a{
         width: 5.6em;
         margin-left: 0.5em;
     }
 
     /*Display block nas opçoes do menu caso hover no ul*/
-    #menu1 nav ul:hover li {
-        border-bottom:1px solid #aedce9;
+    #menu nav ul:hover li  {
+        cursor: pointer;
         display: block;
+         border-bottom:1px solid #aedce9;
+         margin: 0;
+    }
+
+    #menu nav ul li.mobile{
+        display: block;
+        border-bottom:1px solid #aedce9;
         margin: 0;
     }
 }
