@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+    <head>
+        <title>Menu Responsivo</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Menu Responsivo sem JS">
+        <link rel="stylesheet" type="text/css" href="css/reset.css">
+
+        <style>
+
+            body {
+                /*62.5% do default 16px dá 10px, facilitando depois pra usar em*/
+                font: 62.5%/1.4 sans-serif;
+            }
+
+            main {
+                width: 100%;
+                max-width: 1024px;
+                margin: 0 auto;
+            }
+
+            main p{
+                text-align: justify;
+            }
+
+            footer{
+                background: #0E2B3D;
+                margin-top: 2em;
+            }
+
+            footer section p{
+                color: #fff;
+                text-align: center;
+                font-size: 1.2em;
+                padding: 1em;
+            }
+
+            footer section p:after{
+                content: "(matheus.tristao@gmail.com)"
+            }
+
+            h1{
+                font-size: 2.5em;
+            }
+
+            .negrito{
+                font-weight: bold;
+            }
+
+            /*Menu responsivo 1*/
+
+            #menu1{
+                background-color: #0E2B3D;
+            }
+
+            #menu1 h1{
+                text-align: center;
+                color: #fff;
+            }
+
+            #menu1 nav{
+                position: relative; /* Os filhos que  forem absolute vão se basear nele*/
+                z-index: 9999;
+                height: 4.5em; /* 4x10 = 40px*/
+                font-weight: bold;
+                max-width: 1024px;
+                width: 100%;
+                margin: 0 auto;
+                text-align: center;
+            }
+
+            #menu1 nav figure{
+                width: 10em;
+                height: 4em;
+                position: absolute;
+                right: 0;
+            }
+
+            #menu1 nav figure img{
+                float: right;
+                height: 4em;
+                margin: 0;
+                padding: 0;
+            }
+
+            #menu1 nav ul{
+                position: absolute;
+                left: 0;
+                margin: 0; /*Tira margem esquerda do conjunto de intens do menu*/
+                padding: 0;
+            }
+
+            #menu1 nav ul li{
+                font-size: 1.4em; /* Tamanho da fonte vai ser 1.4 x 10 = 14px*/
+                text-transform: uppercase;
+                margin-right: 0.5em;
+                margin-top: 0.7em;
+                padding: 0;
+                list-style: none; /* Remove a bolinha antes do li */
+                display: inline-block; /* li ocupa só o espaço do seu conteúdo, em vez da linha toda*/
+            }
+
+            #menu1 nav a{
+                padding: 0.5em 1.2em; /* Padding top e bottom de 5px e 12px para os itens do menu*/
+                text-decoration: none; /* Remoção do sublinhado*/
+                color: #fff;
+            }
+
+            #menu1 nav a:hover{
+                background: #e2a618;
+                color: #333;
+                border-radius: 0.4em;
+            }
+
+            @media screen and (max-width: 680px) {
+
+                body{
+                    margin: 0 0.5em 0 0.5em;
+                }
+
+                #menu1 nav {
+                    position: relative;
+                    padding-top: 0.3em;
+                }
+
+                #menu1 h1, #menu1 figure{
+                    display: none;
+                }	
+
+                #menu1 nav ul{
+                    width: 100%;
+                }
+
+                /* display none nas opções do menu*/
+                #menu1 nav ul li{
+                    background: #0E2B3D;
+                    display: none;
+                    margin: 0; 
+                }	
+
+                #menu1 nav li.current{
+                    display: block;
+                }	
+
+                #menu1 nav .current:after{
+                    content: "\2630";  /*Símbolo do menu sanduíche com três barras horizontais*/
+                    position: absolute; /* position absolute faz a referência ser o nav que tem position relative*/
+                    right: 0.7em; /* em relação ao nav, fica 7px à direita*/
+                    top: 0;
+                    font-size: 2em;
+                    color: #fff;
+                }
+
+                #menu1 nav a{
+                    display: block;
+                    padding: 0.5em 0.5em 0.5em 1em;
+                    text-align: left;
+                }
+
+                #menu1 .current a{
+                    width: 5.6em;
+                    margin-left: 0.5em;
+                }
+
+                /*Display block nas opçoes do menu caso hover no ul*/
+                #menu1 nav ul:hover li {
+                    border-bottom:1px solid #aedce9;
+                    display: block;
+                    margin: 0;
+                }
+            }
+        </style>
+    </head>
+
+    <body id="body">
+        <div class="tudo">
+            <div id="menu1">
+                <header>
+                    <h1> Menu Responsivo</h1>
+                </header>
+                <nav>
+                    <ul>
+                        <li class="current"><a href="#">Home</a></li>
+                        <li><a href="#">Página 1</a></li>
+                        <li><a href="#">Página 2</a></li>
+                        <li><a href="#">Página 3</a></li>
+                        <li><a href="#">Página 4</a></li>
+                    </ul>
+
+                    <figure>
+                        <img src="images/css3.png" alt="logomarca do css3">
+                        <img src="images/html5.png" alt="logomarca do html5">
+                    </figure>
+
+                </nav>
+
+            </div>
+
+            <main>
+                <p>
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                </p>
+            </main>	
+
+            <footer>
+                <section>
+                    <p>
+                        <span class="negrito">Desenvolvido por: </span>Matheus Oliveira Tristão dos Anjos
+                    </p>
+                </section>
+
+            </footer>
+
+        </div>
+    </body>
+
+</html>
