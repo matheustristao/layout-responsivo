@@ -36,7 +36,7 @@ footer section p{
     padding: 1em;
 }
 
-footer section p:after{
+footer section p#nome:after{
     content: "(matheus.tristao@gmail.com)"
 }
 
@@ -47,6 +47,10 @@ footer section a{
 
 footer section a:hover{
     color: yellow;
+}
+
+footer img{
+    height: 4em;
 }
 
 h1{
