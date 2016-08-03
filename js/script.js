@@ -6,6 +6,8 @@
 
 window.addEventListener("load", function load() {
 
+    createMenu();
+
     var main = document.getElementsByTagName("main");
     var footer = document.getElementsByTagName("footer");
 
@@ -32,6 +34,53 @@ window.addEventListener("load", function load() {
     });
 
 });
+
+function createMenu() {
+    var menu = document.getElementById("menuList");
+
+    var items = [
+        {
+            name: "home",
+            link: "index.html"
+        },
+        {
+            name: "sobre o site",
+            link: "sobre.html"
+        },
+        {
+            name: "contato",
+            link: "contato.html"
+        },
+        {
+            name: "página 3",
+            link: "#"
+        },
+        {
+            name: "página 4",
+            link: "#"
+        }
+    ];
+
+    for (var i = 0; i < items.length; i++) {
+
+        var li = document.createElement("li");
+        var a = document.createElement("a");
+
+        a.setAttribute('href', items[i].link);
+        a.appendChild(document.createTextNode(items[i].name));
+
+        li.appendChild(a);
+
+        if (items[i].name === "home") {
+            li.className = "itemMenu current";
+        } else {
+            li.className = "itemMenu";
+        }
+
+        menu.appendChild(li);
+    }
+
+}
 
 function toogleMobileMenu(show) {
     var menuList = document.getElementById("menuList");
