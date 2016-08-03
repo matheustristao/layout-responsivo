@@ -12,6 +12,7 @@ window.addEventListener("load", function load() {
     var footer = document.getElementsByTagName("footer");
 
     var menu = document.getElementById("menu");
+    var card = document.getElementById("card");
 
     menu.addEventListener("click", function () {
         toogleMobileMenu(true);
@@ -31,6 +32,10 @@ window.addEventListener("load", function load() {
 
     window.addEventListener("scroll", function () {
         showFixedNav();
+    });
+
+    card.addEventListener("click", function () {
+        flipCard(card);
     });
 
 });
@@ -104,4 +109,13 @@ function showFixedNav() {
     } else {
         document.getElementById("tituloHeader").style.display = "block";
     }
+}
+
+function flipCard(card) {
+    if (card.className.indexOf("hover") > -1) {
+        card.className = card.className.replace("hover", "");
+    } else {
+        card.className += " hover";
+    }
+
 }

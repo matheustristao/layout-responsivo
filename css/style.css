@@ -248,7 +248,7 @@ article figure#imageMatheus img{
     }	
 
     #menu nav .current:after{
-        content: "\2630";  /*Símbolo do menu sanduíche com três barras horizontais*/
+        content: "\2261";  /*Símbolo do menu sanduíche com três barras horizontais*/
         position: absolute; /* position absolute faz a referência ser o nav que tem position relative*/
         right: 0.7em; /* em relação ao nav, fica 7px à direita*/
         top: 0;
