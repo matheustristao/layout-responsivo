@@ -32,7 +32,7 @@ footer{
 footer section p{
     color: #fff;
     text-align: center;
-    font-size: 1.2em;
+    font-size: 1.5em;
     padding: 1em;
 }
 
@@ -40,17 +40,12 @@ footer section p#nome:after{
     content: "(matheus.tristao@gmail.com)"
 }
 
-footer section a{
-    text-decoration: none;
-    color: #fff;
-}
-
 footer section a:hover{
     color: yellow;
 }
 
 footer img{
-    height: 4em;
+    height: 3em;
 }
 
 h1{
@@ -127,16 +122,6 @@ h1{
     background: #e2a618;
     color: #333;
     border-radius: 0.4em;
-}
-
-#menu nav#navFixed{
-    display: none;
-}
-
-#menu nav#navFixed.fixed{
-    display: block;
-    position: fixed;
-    top: 0;
 }
 
 @media screen and (max-width: 680px) {
