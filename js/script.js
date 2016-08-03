@@ -26,6 +26,11 @@ window.addEventListener("load", function load() {
     window.addEventListener('resize', function () {
         toogleMobileMenu(false);
     });
+
+    window.addEventListener("scroll", function () {
+        showFixedNav();
+    });
+
 });
 
 function toogleMobileMenu(show) {
@@ -40,5 +45,14 @@ function toogleMobileMenu(show) {
         } else if (show === false) {
             items[i].className = items[i].className.replace("mobile", "");
         }
+    }
+}
+
+function showFixedNav() {
+    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+        document.getElementById("tituloHeader").style.display = "none";
+
+    } else {
+        document.getElementById("tituloHeader").style.display = "block";
     }
 }
