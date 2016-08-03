@@ -19,6 +19,23 @@ main {
     max-width: 1024px;
 }
 
+#sobre main section{
+    margin: 0 5em 2em 0;
+    display: inline-block;
+}
+
+#sobre main section#contentAbout{
+    max-width: 500px;
+    width: 100%;
+    margin-left: 16px;
+    vertical-align: top;
+}
+
+#sobre main section#contentAbout ul li{
+    font-size: 16px;
+    list-style: circle;
+}
+
 main p{
     text-align: justify;
     font-size: 1.5em;
@@ -63,6 +80,7 @@ h1{
     position: fixed;
     top: 0;
     width: 100%;
+    z-index: 2; /*Deixa o menu na frente de outros elementos quando ele abaixa*/
 }
 
 #menu h1{
@@ -72,7 +90,6 @@ h1{
 
 #menu nav{
     position: relative; /* Os filhos que  forem absolute vão se basear nele*/
-    z-index: 9999;
     height: 4.5em; /* 4x10 = 40px*/
     font-weight: bold;
     max-width: 1024px;
@@ -124,6 +141,78 @@ h1{
     border-radius: 0.4em;
 }
 
+/*card que gira*/
+
+/*Quando é feito hover no flip-container ou quando flipe-container tem a classe hover(adicionado com click) a classe .flipper rotaciona 180graus*/
+.flip-container:hover .flipper, .flip-container.hover .flipper {
+    transform: rotateY(180deg);
+}
+
+/*Aqui é definido o tamanho do card e de todos os lados*/
+.flip-container, .front, .back {
+    width: 30em;
+    height: 44em;
+}
+
+/* Abaixo é indicado que a figura vai ocupar 100% da largura do card*/
+article figure{
+    width: 100%;
+    text-align: center;
+    padding: 0.5em;
+} 
+
+article figure#backImage img{
+    width: 100%;
+}
+
+article figure#imageMatheus img{
+    width: 50%;
+    border-radius: 50%;
+}
+
+.flipper {
+    transition: 0.5s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+/* Mantém os dois lados no topo do card*/
+.front{
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    transform: rotateY(0deg);
+    background: #1E2C39;
+}
+
+.back {
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    transform: rotateY(180deg);
+}
+
+.front #imageMatheus{
+    height: 40%;
+}
+
+.front #description{
+    padding: 5px;
+    height: 60%;
+    font-size: 16px;
+    background: #B1464C;
+    color: white;
+}
+
+.front #description ul li{
+    border-bottom: 1px solid #fff;
+    padding: 5px;
+}
+
+.front #description ul li:last-child{
+    border: 0;
+}
+
 @media screen and (max-width: 680px) {
 
     body{
@@ -133,7 +222,7 @@ h1{
     main {
         margin : 5em auto 0 auto; /*top: 100px, right: auto, bottom: 0, left: auto*/
     }
-    
+
     #menu nav {
         position: relative;
         padding-top: 0.3em;
