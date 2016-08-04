@@ -11,7 +11,7 @@ and open the template in the editor.
 body {
     /*62.5% do default 16px dá 10px, facilitando depois pra usar em*/
     font: 62.5%/1.4 sans-serif;
-     background: #F7F7F7;
+    background: #F7F7F7;
 }
 
 main {
@@ -214,6 +214,90 @@ article figure#imageMatheus img{
 .front #description ul li:last-child{
     border: 0;
 }
+
+/* DEFINIÇÃO DO FORM DE CONTATO*/
+
+/*Aqui eu defino que o formulário pode ocupar no máximo 500px mas ocupará 100% até chegar nisso. Também centralizo o form na tela*/
+main section.form{
+    width: 100%;
+    max-width: 500px;
+    background: #B1464C;
+    color: #fff;
+    margin: 0 auto;
+}
+
+main section form fieldset legend{
+    font-size: 2.2em;
+}
+
+main section form fieldset div{
+    font-size: 2em;
+}
+
+/*Aqui eu defino espaçamento interno pra legenda do form*/
+main section form fieldset legend{
+    padding: 0.2em 0 0.5em 0.5em;
+}
+
+/*Aqui eu faço display block no label pra ele ficar acima do input*/
+main section form fieldset label{
+    display: block;
+    padding: 0.2em 0 0 0.5em;
+}
+
+main section h1{
+    text-align: center;
+    padding: 0.5em;
+    background: #0E2B3D;
+}
+
+/*Aqui eu tiro as bordas dos inputs, deixando só a borda debaixo e deixo o input transparente*/     
+main section form input[type="text"],
+main section form input[type="date"],
+main section form input[type="email"]
+{
+    border-top: 0; 
+    border-left: 0; 
+    border-right: 0; 
+    border-bottom: 1px solid #fff; 
+    font-size: 0.8em;
+    width: 95%;
+    background: transparent;
+    padding: 0.5em;
+    margin: 0.5em;
+}
+
+/*Aqui eu removo a borda quando o input é selecionado*/    
+main section form input[type="text"]:focus,
+main section form input[type="date"]:focus,
+main section form input[type="email"]:focus,
+main section form select:focus
+{
+    outline: none;
+}
+
+main section form input[type="submit"],
+main section form input[type="button"]{
+    font-size: 2em;
+    width: 100%;
+    padding: 3%;
+    background: #0070BA;
+    border-bottom: 2px solid #0070BA;
+    border-top-style: none;
+    border-right-style: none;
+    border-left-style: none;    
+    color: #fff;
+    cursor: pointer;
+}
+
+main section form input[type="submit"]:hover, 
+main section form input[type="button"]:hover,
+main section form input[type="submit"].hover,
+main section form input[type="button"].hover
+{
+    background: #198ED0;
+}
+
 
 @media screen and (max-width: 680px) {
 
