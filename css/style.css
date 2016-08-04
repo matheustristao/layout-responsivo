@@ -21,15 +21,14 @@ main {
 }
 
 #sobre main section{
-    margin: 0 5em 2em 0;
     display: inline-block;
+    max-width: 400px;
+    width: 100%;
+    vertical-align: top;
 }
 
 #sobre main section#contentAbout{
-    max-width: 500px;
-    width: 100%;
-    margin-left: 16px;
-    vertical-align: top;
+    padding-left: 4em;
 }
 
 #sobre main section#contentAbout ul li{
@@ -152,7 +151,7 @@ h1{
 
 /*Aqui é definido o tamanho do card e de todos os lados*/
 .flip-container, .front, .back {
-    width: 30em;
+    width: 100%;
     height: 44em;
 }
 
@@ -164,11 +163,10 @@ article figure{
 } 
 
 article figure#backImage img{
-    width: 100%;
+    height: 40em;
 }
 
 article figure#imageMatheus img{
-    width: 50%;
     border-radius: 50%;
 }
 
@@ -365,6 +363,10 @@ main section form input[type="button"].hover
         display: block;
         border-bottom:1px solid #aedce9;
         margin: 0;
+    }
+    
+    #sobre main section#contentAbout{
+        padding-left: 2em;
     }
 }
 
