@@ -10,6 +10,51 @@
         <link rel="stylesheet" type="text/css" href="css/style.css">
 
         <script src="js/script.js"></script>
+
+        <style>
+            main section.form{
+                width: 100%;
+                max-width: 400px;
+                background: #B1464C;
+            }
+
+            main section h1{
+                background: #0E2B3D;
+                color: #fff;
+            }
+
+            main section form input[type="text"]:focus,
+            main section form input[type="date"]:focus,
+            main section form input[type="email"]:focus,
+            main section form select:focus
+            {
+                box-shadow: 0 0 5px #0E2B3D;
+                border: 1px solid #0E2B3D;
+            }
+
+            main section form input[type="submit"],
+            main section form input[type="button"]{
+                width: 100%;
+                padding: 3%;
+                background: #0070BA;
+                border-bottom: 2px solid #0070BA;
+                border-top-style: none;
+                border-right-style: none;
+                border-left-style: none;    
+                color: #fff;
+                cursor: pointer;
+            }
+
+            main section form input[type="submit"]:hover, 
+            main section form input[type="button"]:hover,
+            main section form input[type="submit"].hover,
+            main section form input[type="button"].hover
+            {
+                background: #198ED0;
+            }
+
+        </style>
+
     </head>
 
     <body id="body">
@@ -36,7 +81,39 @@
             </div>
 
             <main id="main">
-                
+
+                <section class="form">
+
+                    <h1>Entre em contato</h1>
+                    <form action="#" method="post" id="contato">
+                        <fieldset>
+                            <legend>Dados Pessoais</legend>
+                            <div class="campo">
+                                <label for="name">Nome: </label>
+                                <input type="text" id="name" name="name" />
+                            </div>
+                            <div class="campo">
+                                <label>Sexo: </label>
+                                <label class="checkbox">
+                                    <input type="radio" name="sexo" value="masculino"> Masculino
+                                </label>
+                                <label class="checkbox">
+                                    <input type="radio" name="sexo" value="feminino"> Feminino
+                                </label>
+                            </div>
+                            <div class="campo">
+                                <label for="email">Email: </label>
+                                <input type="email" id="email" name="email" />
+                            </div>
+                            <div class="campo">
+                                <label for="idade">Data Nascimento </label>
+                                <input type="date" id="idade" name="idade" />
+                            </div>
+                        </fieldset>
+                        <input type="submit">
+                    </form>
+
+                </section>    
             </main>	
 
             <footer>

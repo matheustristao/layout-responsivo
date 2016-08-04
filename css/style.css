@@ -11,6 +11,7 @@ and open the template in the editor.
 body {
     /*62.5% do default 16px dá 10px, facilitando depois pra usar em*/
     font: 62.5%/1.4 sans-serif;
+     background: #F7F7F7;
 }
 
 main {
@@ -34,6 +35,7 @@ main {
 #sobre main section#contentAbout ul li{
     font-size: 16px;
     list-style: circle;
+    padding-bottom: 1em;
 }
 
 main p{
