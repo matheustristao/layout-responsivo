@@ -145,7 +145,7 @@ h1{
 /*card que gira*/
 
 /*Quando é feito hover no flip-container ou quando flipe-container tem a classe hover(adicionado com click) a classe .flipper rotaciona 180graus*/
-.flip-container:hover .flipper, .flip-container.hover .flipper {
+.flip-container:hover .flipper {
     transform: rotateY(180deg);
 }
 
