@@ -12,28 +12,69 @@
         <script src="js/script.js"></script>
 
         <style>
+
+            /*Aqui eu defino que o formulário pode ocupar no máximo 500px mas ocupará 100% até chegar nisso. Também centralizo o form na tela*/
             main section.form{
                 width: 100%;
-                max-width: 400px;
+                max-width: 500px;
                 background: #B1464C;
+                color: #fff;
+                margin: 0 auto;
+            }
+
+            main section form fieldset legend{
+                font-size: 2.2em;
+            }
+
+            main section form fieldset div{
+                font-size: 2em;
+            }
+
+            /*Aqui eu defino espaçamento interno pra legenda do form*/
+            main section form fieldset legend{
+                padding: 0.2em 0 0.5em 0.5em;
+            }
+            
+            /*Aqui eu faço display block no label pra ele ficar acima do input*/
+            main section form fieldset label{
+                display: block;
+                padding: 0.2em 0 0 0.5em;
             }
 
             main section h1{
+                text-align: center;
+                padding: 0.5em;
                 background: #0E2B3D;
-                color: #fff;
             }
 
+           /*Aqui eu tiro as bordas dos inputs, deixando só a borda debaixo e deixo o input transparente*/     
+            main section form input[type="text"],
+            main section form input[type="date"],
+            main section form input[type="email"]
+            {
+                border-top: 0; 
+                border-left: 0; 
+                border-right: 0; 
+                border-bottom: 1px solid #fff; 
+                font-size: 0.8em;
+                width: 95%;
+                background: transparent;
+                padding: 0.5em;
+                margin: 0.5em;
+            }
+
+            /*Aqui eu removo a borda quando o input é selecionado*/    
             main section form input[type="text"]:focus,
             main section form input[type="date"]:focus,
             main section form input[type="email"]:focus,
             main section form select:focus
             {
-                box-shadow: 0 0 5px #0E2B3D;
-                border: 1px solid #0E2B3D;
+                outline: none;
             }
-
+    
             main section form input[type="submit"],
             main section form input[type="button"]{
+                font-size: 2em;
                 width: 100%;
                 padding: 3%;
                 background: #0070BA;
@@ -89,21 +130,21 @@
                         <fieldset>
                             <legend>Dados Pessoais</legend>
                             <div class="campo">
-                                <label for="name">Nome: </label>
+                                <label for="name">Nome </label>
                                 <input type="text" id="name" name="name" />
                             </div>
                             <div class="campo">
-                                <label>Sexo: </label>
+                                <label for="email">Email </label>
+                                <input type="email" id="email" name="email" />
+                            </div>
+                            <div class="campo">
+                                <label>Sexo </label>
                                 <label class="checkbox">
                                     <input type="radio" name="sexo" value="masculino"> Masculino
                                 </label>
                                 <label class="checkbox">
                                     <input type="radio" name="sexo" value="feminino"> Feminino
                                 </label>
-                            </div>
-                            <div class="campo">
-                                <label for="email">Email: </label>
-                                <input type="email" id="email" name="email" />
                             </div>
                             <div class="campo">
                                 <label for="idade">Data Nascimento </label>
