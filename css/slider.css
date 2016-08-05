@@ -1,0 +1,84 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 05/08/2016, 11:59:11
+    Author     : matheusanjos
+*/
+
+/*
+    Aqui eu defino o tamanho do slider
+*/
+main figure {
+    max-width: 1024px;
+    max-height: 30em;
+    width: 100%;
+    height: 30em;
+    position: relative;
+    margin: 3em auto;
+}
+
+main figure img {
+    border: none;
+    width: 100%;
+}
+
+/*
+    all implica que o efeito funcionará para qualquer tipo de alteração no elemento
+    ease-out, de acordo com a w3schools cria um efeito com final mais lento
+    0.5s indica o tempo que a transição vai demorar
+*/
+figure a {
+    -webkit-transition:all ease-out 0.5s;
+    -moz-transition:all ease-out 0.5s;
+    -o-transition:all ease-out 0.5s;
+    -ms-transition:all ease-out 0.5s;
+    transition:all ease-out 0.5s;
+
+    position: absolute; 
+    top: 0;
+    left: 0; 
+    opacity: 0; /* Opacity esconde o elemento a, que contem a imagem*/
+}
+
+/*
+    Aqui o elemento a que tem a classe ativo recebe 1 de opacity e passa a aparecer
+*/
+figure a.ativo {
+    opacity: 1!important;
+}
+
+/*
+    font-weitgh para deixar em negriro os controladores
+    padding de 0 no top e bottom e 1em nos lados, para aumentar a área clicável
+*/
+main figure figcaption span.controller {
+    cursor: pointer;
+    position: absolute; 
+    font-weight: bold;
+    padding: 0 1em;
+}
+
+main figure span.prev {
+    left: 5px;
+}
+
+main figure span.next {
+    right: 5px;
+}
+
+/*
+    Aqui eu defino que o campo da legenda 
+*/
+figcaption {
+    width: 100%;
+    background: #B1464C; /* Fundo vermelho no mesmo tom do card*/
+    text-align: center; /* Texto centralizado*/
+    color: #fff;
+    font-size: 2em;
+    position: absolute;
+    bottom: 0; /* Como é absolute, procura o pai relative, que é o slider, e coloca bottom 0*/
+    padding: 0.4em; /* Espaçamento interno*/
+}

@@ -37,9 +37,11 @@ window.addEventListener("load", function load() {
         showFixedNav();
     });
 
-    card.addEventListener("click", function () {
-        flipCard(card);
-    });
+    if (card) {
+        card.addEventListener("click", function () {
+            flipCard(card);
+        });
+    }
 
 });
 
