@@ -9,6 +9,7 @@ window.addEventListener("load", function load() {
     createMenu();
 
     var main = document.getElementsByTagName("main");
+    var section = document.getElementsByTagName("section");
     var footer = document.getElementsByTagName("footer");
 
     var menu = document.getElementById("menu");
@@ -18,9 +19,11 @@ window.addEventListener("load", function load() {
         toogleMobileMenu(true);
     });
 
-    main[0].addEventListener("click", function () {
-        toogleMobileMenu(false);
-    });
+    for (var i = 0; i < section.length; i++) {
+        section[i].addEventListener("click", function () {
+            toogleMobileMenu(false);
+        });
+    }
 
     footer[0].addEventListener("click", function () {
         toogleMobileMenu(false);
