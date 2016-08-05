@@ -21,11 +21,17 @@ main {
     padding: 0 1em;
 }
 
+/* Melhorar centralização do container*/
+#sobre main div#container{
+    text-align: center;
+}
+
 #sobre main section{
     display: inline-block;
     max-width: 400px;
     width: 100%;
     vertical-align: top;
+    text-align: left;
 }
 
 #sobre main section#contentAbout{
