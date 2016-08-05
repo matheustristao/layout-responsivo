@@ -18,6 +18,7 @@ main {
     margin : 10em auto 0 auto; /*top: 100px, right: auto, bottom: 0, left: auto*/
     width: 100%;
     max-width: 1024px;
+    padding: 0 1em;
 }
 
 #sobre main section{
