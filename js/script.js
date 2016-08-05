@@ -34,11 +34,9 @@ window.addEventListener("load", function load() {
         showFixedNav();
     });
 
-    /*
     card.addEventListener("click", function () {
         flipCard(card);
     });
-    */
 
 });
 
@@ -112,3 +110,11 @@ function showFixedNav() {
         document.getElementById("tituloHeader").style.display = "block";
     }
 }
+
+function flipCard(card) {
+    if (card.className.indexOf("hover") > -1) {
+        card.className = card.className.replace("hover", "");
+    } else {
+        card.className += " hover";
+    }
+} 

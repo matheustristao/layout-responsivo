@@ -145,7 +145,11 @@ h1{
 /*card que gira*/
 
 /*Quando é feito hover no flip-container ou quando flipe-container tem a classe hover(adicionado com click) a classe .flipper rotaciona 180graus*/
-.flip-container:hover .flipper {
+.flip-container:hover {
+    cursor: pointer;
+}
+
+.flip-container.hover .flipper {
     transform: rotateY(180deg);
 }
 
@@ -263,6 +267,7 @@ main section form input[type="email"]
     background: transparent;
     padding: 0.5em;
     margin: 0.5em;
+    color: #fff;
 }
 
 /*Aqui eu removo a borda quando o input é selecionado*/    
@@ -300,7 +305,7 @@ main section form input[type="button"].hover
 @media screen and (max-width: 680px) {
 
     body{
-        margin: 0 0.5em 0 0.5em;
+        margin: 0 0.5em;
     }
 
     main {
