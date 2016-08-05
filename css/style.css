@@ -22,11 +22,11 @@ main {
 }
 
 /* Melhorar centralização do container*/
-#sobre main div#container{
+#index main div#container{
     text-align: center;
 }
 
-#sobre main section{
+#index main section{
     display: inline-block;
     max-width: 400px;
     width: 100%;
@@ -34,11 +34,11 @@ main {
     text-align: left;
 }
 
-#sobre main section#contentAbout{
+#index main section#contentAbout{
     padding-left: 4em;
 }
 
-#sobre main section#contentAbout ul li{
+#index main section#contentAbout ul li{
     font-size: 16px;
     list-style: circle;
     padding-bottom: 1em;
@@ -374,7 +374,7 @@ main section form input[type="button"].hover
         margin: 0;
     }
     
-    #sobre main section#contentAbout{
+    #index main section#contentAbout{
         padding-left: 2em;
     }
 }
