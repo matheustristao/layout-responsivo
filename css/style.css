@@ -157,6 +157,8 @@ h1{
 }
 
 .flip-container.hover .flipper {
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
     transform: rotateY(180deg);
 }
 
@@ -182,7 +184,10 @@ article figure#imageMatheus img{
 }
 
 .flipper {
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
     transition: 0.5s;
+    -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
     position: relative;
 }
@@ -192,6 +197,8 @@ article figure#imageMatheus img{
     backface-visibility: hidden;
     position: absolute;
     top: 0;
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
     transform: rotateY(0deg);
     background: #1E2C39;
 }
@@ -200,6 +207,8 @@ article figure#imageMatheus img{
     backface-visibility: hidden;
     position: absolute;
     top: 0;
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
     transform: rotateY(180deg);
 }
 
@@ -373,7 +382,7 @@ main section form input[type="button"].hover
         border-bottom:1px solid #aedce9;
         margin: 0;
     }
-    
+
     #index main section#contentAbout{
         padding-left: 2em;
     }

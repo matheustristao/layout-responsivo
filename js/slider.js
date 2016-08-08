@@ -60,7 +60,7 @@ window.addEventListener("load", function load() {
             element.classList.remove("ativo");
         } else {
             element.classList.remove("ativo");
-            element = document.querySelector("a:last-child");
+            element = document.querySelector("#slider a:last-child");
             element.classList.add("ativo");
             this.escreverLegenda(element);
         }
