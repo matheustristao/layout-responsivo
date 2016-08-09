@@ -151,9 +151,15 @@ h1{
 
 /*card que gira*/
 
-/*Quando é feito hover no flip-container ou quando flipe-container tem a classe hover(adicionado com click) a classe .flipper rotaciona 180graus*/
 .flip-container:hover {
     cursor: pointer;
+}
+
+/*Quando flip-container tem a classe hover(adicionado com click) a classe .flipper rotaciona 180graus*/
+
+.flip-container{
+    -webkit-perspective: 900000px;
+    perspective: 900000px;
 }
 
 .flip-container.hover .flipper {
@@ -192,8 +198,8 @@ article figure#imageMatheus img{
     position: relative;
 }
 
-/* Mantém os dois lados no topo do card*/
 .front{
+    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     position: absolute;
     top: 0;
@@ -204,6 +210,7 @@ article figure#imageMatheus img{
 }
 
 .back {
+    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     position: absolute;
     top: 0;
